@@ -1,0 +1,8 @@
+.titles{
+	background-color: lightblue;
+	text-align: center;
+}
+
+.input, .output{
+	border-style: solid;
+}
