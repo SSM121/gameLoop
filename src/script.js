@@ -9,16 +9,16 @@ function gameLoop(timestamp){
 	prevTime = timestamp;
 	r = update(elapsed);
 	render(r);
-	for(i = 0; i < events.length; i++){
-		if(events[i].times <= 0){
-			events.splice(i, 1);
-		}
-	}
 	window.requestAnimationFrame(gameLoop);
 
 }
 
 function update(elapsed){
+	for(i = 0; i < events.length; i++){
+		if(events[i].times <= 0){
+			events.splice(i, 1);
+		}
+	}
 	var r = [];
 	for(i of events){
 		i.curr = i.curr + elapsed;
